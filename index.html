@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 style="color:rgb(42, 165, 118); font-size: large;"> DOM ASSESMENT</h1>
+    <h2 style="color:rgb(0, 183, 255)">Q.1-Write the code to access element which is having id as "text"?</h2>
+      <div id="text">Ans-Hi,Welcome to prepbytes Session
+        <pre style="color:crimson;font-size: x-large;">
+            let a= document.getElementById("text");
+            console.log(a.innerText);
+        </pre>
+      </div>
+      <h2 style="color: chartreuse;">Q2.Write the code to access element which is having tag as "h1"?</h2>
+      <h1>Ans-Hello Prepbytes<h1>
+      <pre style="color:crimson;font-size: x-large;">
+        let tagName= document.getElementsByTagName("h1");
+        console.log(tagName[0].innerText);
+      </pre>
+      <h2 style="color:blueviolet">Q3.Write the code to access element which is having tag as "box"?</h2>
+      <div class="box1">Hello World
+        <pre style="color: crimson; font-size: x-large;">Ans-
+            let c = document.getElementsByClassName("box");
+           console.log(c[0].innerText)
+        </pre>
+      </div>
+      <h2 style="color: blue;">7-Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h2>
+        <div id="clock">
+        <p id="hrs">hour</p>
+        <p id="min">min</p>
+        <p id="sec">sec</p>
+    </div>
+    <pre style="color: crimson; font-size: x-large;">Ans-
+
+      function timer (){
+        let times = new Date()
+        let hr = times.getHours();
+        let min = times.getMinutes();
+        let sec = times.getSeconds(); 
+        // document.getElementById("clock").innerHTML = hr +":" + min + ":" + sec + ":";
+        document.getElementById("clock").innerHTML=`${hr}  ${min} ${sec}`;
+        // setInterval(timer,1000);
+    }
+    setInterval(timer,1000);
+    // setInterval(timer,5000) again and again
+    // setTimeout(timer,5000)  once after 5 sec
+    console.log("something")
+  </pre>  
+    
+    <!-- <button onclick="timer()">Start Clock</button> //if u want to without click time --> 
+    <h2 style="color: rgb(0, 204, 255);">Q4.Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h2>
+    <pre style="color:crimson;font-size: x-large; ">Ans-
+      let container = document.getElementById("container");
+      let boxelement=document.getElementsByClassName("box");
+      let btn=document.getElementById("btn");
+
+       btn.addEventListener("click",function(){
+       debugger
+       container.style.flexDirection = "column";
+       // flex-box.style.margin
+       })
+     </pre>
+    <div id="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <button id="btn">Change Flex Direction</button>
+    <h2 style="color: chartreuse; ">Q5-<lt><</lt>h1<lt>></lt>Hello<lt><</lt>h1<lt>></lt>Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h2>
+    <h1 id="hello">HELLO</h1>
+    <pre style="color: crimson;font-size:x-large;">Ans-let helloElement=document.getElementById("hello")
+      helloElement.addEventListener("mouseleave",function(){
+          helloElement.style.color="crimson";
+          helloElement.innerText="Hello World";
+      })
+      </pre>
+    <h2 style="color: blue;">Q6-"<lt><</lt>Hello<lt>></lt>Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</h2>
+    <h1 id="heading">Hello</h1>
+    <pre style="color: crimson;font-size: x-large;">Ans-
+      let headingElement=document.getElementById("heading").style.color="red";
+    </pre>
+    <h2 style="color: darkblue;">Q8-Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h2>
+    <p id="text">Hello World</p>
+    <button id="btns">Repalce Text</button>
+    <h2 style="color: darkcyan;">Q9-Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</h2>
+    <pre style="color: crimson;font-size: x-large;">Ans-
+    <label for="Year-select">Choose a Year"></label>
+    <select name="2018-2019" id="Year">
+    <option value="2018-2019">--Please choose an option--</option>
+    <option value="2019-2020">20219-2020</option>
+    <option value="2020-2021">2020-2021</option>
+    <option value="2021-2022">2021-2022</option>
+    <option value="2022-2023">2022-2023</option>
+    <option value="2022-2023">2022-2023</option>
+    <option value="2023-2024">2023-2024</option>
+    <option value="2024-2025">2024-2025</option>
+   </select>
+</pre>
+<h2 style="color: darkblue;">Q-10-What’s the difference between window vs document?</h2>
+<li style="color: crimson; font-size: x-large;">Window is the execution context and global object for that context's JavaScript. It is the top most object and outermost element of the object hierarchy.</li>
+</i>
+<li style="color:crimson; font-size: x-large;">Document contains the DOM, initialized by parsing HTML.Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page</li></style=>
+
+    <script src="./script.js"></script>
+</body>
+</html>
