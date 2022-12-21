@@ -84,9 +84,24 @@
     <pre style="color: crimson;font-size: x-large;">Ans-
       let headingElement=document.getElementById("heading").style.color="red";
     </pre>
+
     <h2 style="color: darkblue;">Q8-Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h2>
-    <p id="text">Hello World</p>
-    <button id="btns">Repalce Text</button>
+    <p id="demo">Hello World</p>
+    <button id="myBtn">Repalce Text</button>
+    <pre style="color: crimson; font-size: x-large;">Ans-
+      const button=document.getElementById("myBtn");
+
+     button.addEventListener("click",jyoti);
+
+    function jyoti(){
+    document.getElementById("demo").innerText="Welcome elevation academy"
+}
+
+    </pre>
+
+
+
+
     <h2 style="color: darkcyan;">Q9-Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</h2>
     <pre style="color: crimson;font-size: x-large;">Ans-
     <label for="Year-select">Choose a Year"></label>

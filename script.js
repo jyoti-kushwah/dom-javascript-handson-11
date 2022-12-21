@@ -43,13 +43,23 @@ helloElement.addEventListener("mouseleave",function(){
 
 let headingElement=document.getElementById("heading").style.color="red";
 
-let btnsElement=document.getElementById("btn")
-btnsElement.addEventListener("mouseenter",function(){
-    //   document.getElementById("text").innerText="Welcome to elevetion  Academy"
-    btnsElement.style.color='crimson';
-    document.getElementById("text").innerText="WELCOME TO ELEVATION ACADEMY"
-})
-//   element.addEventListener("click",myfunction)
+// let btnsElement=document.getElementById("btn")
+// btnsElement.addEventListener("click",function(){
+//     //   document.getElementById("text").innerText="Welcome to elevetion  Academy"
+//     btnsElement.style.color='crimson';
+//     document.getElementById("text").innerText="WELCOME TO ELEVATION ACADEMY";
+// })
+// //   element.addEventListener("click",myfunction)
+
+const button=document.getElementById("myBtn");
+
+button.addEventListener("click",jyoti);
+
+function jyoti(){
+    document.getElementById("demo").innerText="Welcome elevation academy"
+}
+
+
 
    
 
